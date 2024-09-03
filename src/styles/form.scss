@@ -18,21 +18,21 @@ label {
   @apply flex mt-6 mb-2;
 }
 
-input[type=radio] {
+input[type=radio], input[type=checkbox] {
   display: none;
 }
 
-input[type=radio] + label {
+input[type=radio] + label, input[type=checkbox] + label {
   @extend .ft-0;
   @apply flex w-full p-4 border rounded-2xl
   text-center tracking-wider font-semibold
   justify-center items-center
-  cursor-pointer
+  cursor-pointer box-border
   bg-brand-1/10 shadow-md shadow-brand-1/20;
 }
 
-input[type=radio]:checked + label {
-  @apply bg-brand-1 text-white border-2 border-brand-5;
+input[type=radio]:checked + label, input[type=checkbox]:checked + label {
+  @apply bg-brand-1 text-white border-2 border-brand-2 box-border;
 }
 
 select {
