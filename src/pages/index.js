@@ -87,7 +87,7 @@ export default function Home() {
 
       <Blockbuster
         overhead="Beneficios"
-        title="La verdad es que te construir te sale un 35% más barato que comprar"
+        title="La verdad es que construir te sale un 35% más barato que comprar"
         image={i01}
       />
       <section className="reading-container my-16">
