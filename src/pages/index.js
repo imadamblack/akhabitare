@@ -4,6 +4,8 @@ import Link from 'next/link';
 import OptInForm from '../components/form/opt-in-form';
 import { useEffect, useState } from 'react';
 import scrollDepth from '../utils/scrollDepth';
+import Faqs from '../components/faqs';
+
 import i00 from '../../public/landing/00.jpeg';
 import i01 from '../../public/landing/001.png';
 import i02 from '../../public/landing/002.jpeg';
@@ -11,9 +13,9 @@ import i03 from '../../public/landing/003.jpeg';
 import i04 from '../../public/landing/004.png';
 import i05 from '../../public/landing/005.jpeg';
 import i06 from '../../public/landing/006.jpeg';
-import i07 from '../../public/landing/007.png';
+import i07 from '../../public/landing/007.jpg';
 import c01 from '../../public/landing/c01.jpeg';
-import c02 from '../../public/landing/c02.jpeg';
+import c02 from '../../public/landing/c02.jpg';
 import c03 from '../../public/landing/c03.jpeg';
 import t01 from '../../public/landing/t01.png';
 import t02 from '../../public/landing/t02.png';
@@ -26,7 +28,6 @@ import p05 from '../../public/landing/p05.png';
 import p06 from '../../public/landing/p06.png';
 import p07 from '../../public/landing/p07.png';
 import p08 from '../../public/landing/p08.png';
-import Faqs from '../components/faqs';
 
 export default function Home() {
   const [lastClick, setLastClick] = useState('');
@@ -50,7 +51,7 @@ export default function Home() {
         <div className="relative min-h-[24rem] flex-grow w-full md:absolute top-0 inset-x-0 bottom-1/2 md:bottom-0">
           <div
             className="w-full h-[16rem] bottom-0 absolute bg-gradient-to-t from-black via-transparent to-transparent md:opacity-60 z-10"/>
-          <Image src={i00} layout="fill" className="object-cover object-right object-bottom"/>
+          <Image src={i00} layout="fill" className="object-cover object-bottom"/>
         </div>
 
         <div className="container w-full text-center text-white z-10 p-8">
@@ -86,7 +87,7 @@ export default function Home() {
 
       <Blockbuster
         overhead="Beneficios"
-        title="La verdad es que te conviene más construir que comprar"
+        title="La verdad es que te construir te sale un 35% más barato que comprar"
         image={i01}
       />
       <section className="reading-container my-16">
@@ -153,7 +154,7 @@ export default function Home() {
 
       <Blockbuster
         overhead="Target"
-        title="Si tienes un terreno y quieres construir para vender o para vivir, sí hacemos match"
+        title="Con terreno o sin terreno, si quieres construir para vender o para vivir, sí hacemos match"
         image={i03}
       />
       <section className="reading-container my-16">
@@ -236,20 +237,6 @@ export default function Home() {
           </div>
           <div className="w-full relative border border-brand-3 shadow-md bg-black">
             <div className="flex overflow-hidden h-[32rem]">
-              <Image src={c02} className="object-cover object-center"/>
-            </div>
-            <div className="p-8 bg-black">
-              <h3 className="!mb-0">Alba</h3>
-              <p className="overhead text-black">Zapopan</p>
-              <p className="!mt-0 text-white">
-                Objetivo: Casa Habitación<br/>
-                Superficie: 200m<sup>2</sup><br/>
-                Presupuesto obra: $3mdp<br/>
-              </p>
-            </div>
-          </div>
-          <div className="w-full relative border border-brand-3 shadow-md bg-black">
-            <div className="flex overflow-hidden h-[32rem]">
               <Image src={c03} className="object-cover object-center"/>
             </div>
             <div className="p-8 bg-black">
@@ -260,6 +247,21 @@ export default function Home() {
                 Superficie: 320m<sup>2</sup><br/>
                 Presupuesto obra: $6mdp<br/>
                 Vendida en: $9.2mdp<br/>
+              </p>
+            </div>
+          </div>
+          <div className="w-full relative border border-brand-3 shadow-md bg-black">
+            <div className="flex overflow-hidden h-[32rem]">
+              <Image src={c02} className="object-cover object-center"/>
+            </div>
+            <div className="p-8 bg-black">
+              <h3 className="!mb-0">Insignia 2.0</h3>
+              <p className="overhead text-black">Punto Sur Elite</p>
+              <p className="!mt-0 text-white">
+                Objetivo: Inversión<br/>
+                Superficie: 380m<sup>2</sup><br/>
+                Presupuesto obra: $7mdp<br/>
+                En venta: $12mdp<br/>
               </p>
             </div>
           </div>
