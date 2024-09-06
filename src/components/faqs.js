@@ -22,7 +22,7 @@ export default function Faqs() {
     },
     {
       q: "¿Cómo se estructuran los pagos?",
-      a: "Dividimos el presupuesto en cinco pagos basados en el avance de la obra, para darte tranquilidad en tu proyecto."
+      a: "Dividimos el presupuesto en seis pagos basados en el avance de la obra, para darte tranquilidad en tu proyecto."
     }
   ];
 
