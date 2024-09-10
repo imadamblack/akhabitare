@@ -35,7 +35,8 @@ export default function Home() {
   useEffect(() => {
     scrollDepth({
       values: [25, 50, 75, 100],
-      callback: (value) => fbq('trackCustom', `Scroll Depth: ${value}`),
+      callback: (value) => {fbq('trackCustom', `Scroll Depth: ${value}`);
+        console.log('Scroll Depth', value);},
     });
   });
 
@@ -57,7 +58,9 @@ export default function Home() {
         <div className="container w-full text-center text-white z-10 p-8">
           <h1
             className="md:w-2/3 mx-auto relative font-medium ft-9 text-white [text-shadow:_2px_2px_0_rgb(0_0_0_/_20%)]">
-            No somos una constructora más de GDL, hacemos que tu terreno y ladrillos valgan 20% más en un año.
+            {/*No somos una constructora más de GDL, hacemos que tu terreno y ladrillos valgan 20% más en un año.*/}
+            ¿Una constructora más en la ZMG?<br/>
+            Sí, pero con más de 350 proyectos que superaron las expectativas de nuestros clientes
           </h1>
           <div className="flex flex-col justify-start items-center mt-12">
             <Link href="#contact">
@@ -87,7 +90,7 @@ export default function Home() {
 
       <Blockbuster
         overhead="Beneficios"
-        title="La verdad es que construir te sale un 35% más barato que comprar"
+        title="La verdad es que construir te va a generar un 20% de rentabilidad en un año"
         image={i01}
       />
       <section className="reading-container my-16">
