@@ -73,9 +73,9 @@ export default function Home() {
 
       <section className="reading-container my-16">
         <p>
-          Somos un equipo de obsesivos por los detalles, nos apasiona crear espacios donde la calidad y la innovación
-          hagan que tu inversión se multiplique.<br/><br/>
-          Con más de 15 años en este negocio y 350 proyectos completados con éxito en la ZMG, tenemos la experiencia
+          {/*Somos un equipo de obsesivos por los detalles, nos apasiona crear espacios donde la calidad y la innovación*/}
+          {/*hagan que tu inversión se multiplique.<br/><br/>*/}
+          Con más de 15 años en este negocio y 350 proyectos completados con éxito, tenemos la experiencia
           para encargarnos de todo:<br/><br/>
           Desde el proyecto, obviamente la obra y hasta las 3P (ya sabes: pisos, puertas y pendejadas).<br/><br/>
           Así tú puedes seguir dedicándole tiempo a lo que de verdad importa: tu
