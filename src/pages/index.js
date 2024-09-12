@@ -59,8 +59,7 @@ export default function Home() {
           <h1
             className="md:w-2/3 mx-auto relative font-medium ft-9 text-white [text-shadow:_2px_2px_0_rgb(0_0_0_/_20%)]">
             {/*No somos una constructora más de GDL, hacemos que tu terreno y ladrillos valgan 20% más en un año.*/}
-            ¿Una constructora más en la ZMG?<br/>
-            Sí, pero con más de 350 proyectos que superaron las expectativas de nuestros clientes
+            Tu casa terminadísima en <nobr>1 año</nobr>. <br/>Con cocina, aluminios y carpintería de lujo fabricados por nosotros.
           </h1>
           <div className="flex flex-col justify-start items-center mt-12">
             <Link href="#contact">
@@ -92,7 +91,7 @@ export default function Home() {
       <Blockbuster
         overhead="Beneficios"
         title="La verdad es que construir te va a generar un 20% de rentabilidad en un año"
-        image={i01}
+        image={c02}
       />
       <section className="reading-container my-16">
         <p>
