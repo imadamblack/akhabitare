@@ -41,8 +41,8 @@ export default function Home() {
   });
 
   const cta = {
-    main: 'Agenda una llamada',
-    description: 'Obtén una asesoría de construcción que garantice la venta de tu casa',
+    main: 'Agenda una llamada, clic',
+    description: 'Obtén una asesoría de construcción gratuita con nuestro director',
   };
 
   return (
@@ -58,9 +58,10 @@ export default function Home() {
         <div className="container w-full text-center text-white z-10 p-8">
           <h1
             className="md:w-2/3 mx-auto relative font-medium ft-9 text-white [text-shadow:_2px_2px_0_rgb(0_0_0_/_20%)]">
+            Construimos casas para que vivas ahí o las vendas, tú decides, te entregamos en 1 año
             {/*No somos una constructora más de GDL, hacemos que tu terreno y ladrillos valgan 20% más en un año.*/}
-            Tu casa terminadísima en <nobr>1 año</nobr>. <br/>Con cocina, aluminios y carpintería de lujo fabricados por nosotros.
           </h1>
+          <p className="mt-8">Construcción | Arquitectura | Carpintería</p>
           <div className="flex flex-col justify-start items-center mt-12">
             <Link href="#contact">
               <a onClick={() => setLastClick('hero')} className="button mb-4">{cta.main}</a>
@@ -74,7 +75,7 @@ export default function Home() {
         <p>
           {/*Somos un equipo de obsesivos por los detalles, nos apasiona crear espacios donde la calidad y la innovación*/}
           {/*hagan que tu inversión se multiplique.<br/><br/>*/}
-          Con más de 15 años en este negocio y 350 proyectos completados con éxito, tenemos la experiencia
+          Con más de 15 años en el negocio de la construcción y 350 proyectos completados con éxito, tenemos la experiencia
           para encargarnos de todo:<br/><br/>
           Desde el proyecto, obviamente la obra y hasta las 3P (ya sabes: pisos, puertas y pendejadas).<br/><br/>
           Así tú puedes seguir dedicándole tiempo a lo que de verdad importa: tu
@@ -169,9 +170,7 @@ export default function Home() {
           También entendemos que cada proyecto
           cuenta con un presupuesto y un flujo de
           lana.<br/><br/>
-          Hemos descubierto que los proyectos
-          más rentables son aquellos que van <b>desde los $5mdp en construcción</b>.<br/><br/>
-          Buscamos que te sientas cómodo y
+          Queremos que te sientas cómodo y
           seguro al hacer tu inversión, por eso,
           hacemos un esquema de pagos basados
           en el avance de la obra, para darte
@@ -319,12 +318,12 @@ export default function Home() {
         <div className="container">
           <div className="w-full md:w-1/2 mx-auto">
             <h2 className="font-semibold text-white tracking-wide">
-              Listo, es momento de tener una asesoría de construcción
+              Listo, es momento de que nos platiques por qué quieres construir
             </h2>
             <div className="mt-20 mb-12">
-              <p className="ft-1 text-white">Ya llegaste hasta acá, ya leíste este cuento.</p>
+              <p className="ft-1 text-white">Ya llegaste hasta acá.</p>
               <p className="ft-1 text-white">
-                Es momento de compartirnos unos datos y agendar una asesoría.
+                Compártenos unos datos y agenda una llamada con nuestro director.
               </p>
             </div>
             <OptInForm

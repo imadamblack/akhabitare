@@ -90,7 +90,7 @@ export default function OptInForm({lastClick = ''}) {
         className={`w-full ${sending ? '!bg-transparent' : 'hover:!bg-brand-1'}`}
       >{
         !sending
-          ? 'Comenzar →'
+          ? 'Continuar →'
           : <span className="material-symbols-outlined animate-spin">progress_activity</span>
       }</button>
 
