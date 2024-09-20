@@ -90,104 +90,6 @@ export default function Home() {
       </section>
 
       <Blockbuster
-        overhead="Beneficios"
-        title="La verdad es que construir te va a generar un 20% de rentabilidad en un año"
-        image={c02}
-      />
-      <section className="reading-container my-16">
-        <p>
-          La construcción puede ser un campo
-          lleno de incertidumbre y dolores de
-          cabeza, no sabes si te va a tocar alguna
-          constructora buena o una que sea una
-          estafa.<br/><br/>
-          Mira, nosotros cuidamos 3 cosas:
-        </p>
-        <h3>Tenemos nuestras propias fábricas</h3>
-        <p>Desde la carpintería, los acabados y hasta los aluminios y ventanas, nos ponemos muy fresas para asegurar
-          que la mano de obra es adecuada y garanticemos una buena durabilidad y una super estética.</p>
-        <h3>Nos gusta ser muy transparentes</h3>
-        <p>Nuestro esquema de pagos por avance de
-          obra es de lo más claro posible para que
-          no nos pierdas la confianza y puedas seguir
-          cada etapa del proyecto sin sorpresas.</p>
-        <h3>La innovación y personalización</h3>
-        <p>Desde nuestras primeras reuniones vamos
-          identificando tus necesidades y gustos,
-          para que, una vez que te entreguemos tu
-          casa, sientas que es una obra de arte hecha
-          a tu medida.</p>
-
-        <div className="flex flex-col justify-center items-center">
-          <Link href="#contact">
-            <a onClick={() => setLastClick('benefits')} className="button mb-4">{cta.main}</a>
-          </Link>
-          <p className="-ft-1 text-center">{cta.description}</p>
-        </div>
-
-      </section>
-
-      <Blockbuster
-        overhead="Qué esperar"
-        title="Tu casa terminadísima con acabados de lujo en 1 año"
-        image={i02}
-      />
-      <section className="reading-container my-16 space-y-32">
-        <p>La mayoría de nuestros clientes siempre tiene la duda de cómo le hacemos y cuál es nuestro proceso.</p>
-        <p>Para crear este espacio único, se requiere de 7 pasos:</p>
-        <ol>
-          <li className="ft-2 mb-4">Tenemos una cita para poder hacer un <b>levantamiento de requerimientos</b></li>
-          <li className="ft-2 mb-4">Realizamos un <b>ante proyecto</b> para asegurarnos que estamos en la misma línea
-          </li>
-          <li className="ft-2 mb-4">Comenzamos con el <b>Proyecto Ejecutivo</b>, o sea, todos los planos</li>
-          <li className="ft-2 mb-4">Estimamos con precisión un <b>cálculo de metros cuadrados</b> para cotizar la obra y
-            no salirte con sorpresas
-          </li>
-          <li className="ft-2 mb-4">Comenzamos la <b>construcción</b></li>
-          <li className="ft-2 mb-4"><b>Te entregamos</b> tu casa en máximo un año</li>
-          <li className="ft-2 mb-4">Y si tu objetivo es venderla, <b>comenzamos con la promoción para venta</b></li>
-        </ol>
-
-        <div className="flex flex-col justify-center items-center mt-16">
-          <Link href="#contact">
-            <a onClick={() => setLastClick('process')} className="button mb-4">{cta.main}</a>
-          </Link>
-          <p className="-ft-1 text-center">{cta.description}</p>
-        </div>
-      </section>
-
-      <Blockbuster
-        overhead="Target"
-        title="Con terreno o sin terreno, si quieres construir para vender o para vivir, sí hacemos match"
-        image={i03}
-      />
-      <section className="reading-container my-16">
-        <p>
-          Entendemos que los inversionistas
-          como tú buscan más que una simple
-          construcción; buscan hacer un buen
-          negocio.<br/><br/>
-          También entendemos que cada proyecto
-          cuenta con un presupuesto y un flujo de
-          lana.<br/><br/>
-          Queremos que te sientas cómodo y
-          seguro al hacer tu inversión, por eso,
-          hacemos un esquema de pagos basados
-          en el avance de la obra, para darte
-          tranquilidad en la construcción de tu
-          nueva casa.
-        </p>
-
-        <div className="flex flex-col justify-center items-center mt-16">
-          <Link href="#contact">
-            <a onClick={() => setLastClick('target')} className="button mb-4">{cta.main}</a>
-          </Link>
-          <p className="-ft-1 text-center">{cta.description}</p>
-        </div>
-
-      </section>
-
-      <Blockbuster
         overhead="Testimonios"
         title="Y no solo lo digo yo, esto es lo que han dicho nuestros clientes"
         image={i04}
@@ -302,6 +204,104 @@ export default function Home() {
             <p className="-ft-1 text-center">{cta.description}</p>
           </div>
         </div>
+      </section>
+
+      <Blockbuster
+        overhead="Beneficios"
+        title="La verdad es que construir te va a generar un 20% de rentabilidad en un año"
+        image={c02}
+      />
+      <section className="reading-container my-16">
+        <p>
+          La construcción puede ser un campo
+          lleno de incertidumbre y dolores de
+          cabeza, no sabes si te va a tocar alguna
+          constructora buena o una que sea una
+          estafa.<br/><br/>
+          Mira, nosotros cuidamos 3 cosas:
+        </p>
+        <h3>Tenemos nuestras propias fábricas</h3>
+        <p>Desde la carpintería, los acabados y hasta los aluminios y ventanas, nos ponemos muy fresas para asegurar
+          que la mano de obra es adecuada y garanticemos una buena durabilidad y una super estética.</p>
+        <h3>Nos gusta ser muy transparentes</h3>
+        <p>Nuestro esquema de pagos por avance de
+          obra es de lo más claro posible para que
+          no nos pierdas la confianza y puedas seguir
+          cada etapa del proyecto sin sorpresas.</p>
+        <h3>La innovación y personalización</h3>
+        <p>Desde nuestras primeras reuniones vamos
+          identificando tus necesidades y gustos,
+          para que, una vez que te entreguemos tu
+          casa, sientas que es una obra de arte hecha
+          a tu medida.</p>
+
+        <div className="flex flex-col justify-center items-center">
+          <Link href="#contact">
+            <a onClick={() => setLastClick('benefits')} className="button mb-4">{cta.main}</a>
+          </Link>
+          <p className="-ft-1 text-center">{cta.description}</p>
+        </div>
+
+      </section>
+
+      <Blockbuster
+        overhead="Qué esperar"
+        title="Tu casa terminadísima con acabados de lujo en 1 año"
+        image={i02}
+      />
+      <section className="reading-container my-16 space-y-32">
+        <p>La mayoría de nuestros clientes siempre tiene la duda de cómo le hacemos y cuál es nuestro proceso.</p>
+        <p>Para crear este espacio único, se requiere de 7 pasos:</p>
+        <ol>
+          <li className="ft-2 mb-4">Tenemos una cita para poder hacer un <b>levantamiento de requerimientos</b></li>
+          <li className="ft-2 mb-4">Realizamos un <b>ante proyecto</b> para asegurarnos que estamos en la misma línea
+          </li>
+          <li className="ft-2 mb-4">Comenzamos con el <b>Proyecto Ejecutivo</b>, o sea, todos los planos</li>
+          <li className="ft-2 mb-4">Estimamos con precisión un <b>cálculo de metros cuadrados</b> para cotizar la obra y
+            no salirte con sorpresas
+          </li>
+          <li className="ft-2 mb-4">Comenzamos la <b>construcción</b></li>
+          <li className="ft-2 mb-4"><b>Te entregamos</b> tu casa en máximo un año</li>
+          <li className="ft-2 mb-4">Y si tu objetivo es venderla, <b>comenzamos con la promoción para venta</b></li>
+        </ol>
+
+        <div className="flex flex-col justify-center items-center mt-16">
+          <Link href="#contact">
+            <a onClick={() => setLastClick('process')} className="button mb-4">{cta.main}</a>
+          </Link>
+          <p className="-ft-1 text-center">{cta.description}</p>
+        </div>
+      </section>
+
+      <Blockbuster
+        overhead="Target"
+        title="Con terreno o sin terreno, si quieres construir para vender o para vivir, sí hacemos match"
+        image={i03}
+      />
+      <section className="reading-container my-16">
+        <p>
+          Entendemos que los inversionistas
+          como tú buscan más que una simple
+          construcción; buscan hacer un buen
+          negocio.<br/><br/>
+          También entendemos que cada proyecto
+          cuenta con un presupuesto y un flujo de
+          lana.<br/><br/>
+          Queremos que te sientas cómodo y
+          seguro al hacer tu inversión, por eso,
+          hacemos un esquema de pagos basados
+          en el avance de la obra, para darte
+          tranquilidad en la construcción de tu
+          nueva casa.
+        </p>
+
+        <div className="flex flex-col justify-center items-center mt-16">
+          <Link href="#contact">
+            <a onClick={() => setLastClick('target')} className="button mb-4">{cta.main}</a>
+          </Link>
+          <p className="-ft-1 text-center">{cta.description}</p>
+        </div>
+
       </section>
 
       <Blockbuster
