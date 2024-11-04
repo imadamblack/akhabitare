@@ -25,7 +25,7 @@ export const info = {
   },
   optInWebhook: 'https://hook.us1.make.com/ny4n1xqm8x2ycmu38k6k2g4kyhhuok4f',
   surveyWebhook: 'https://hook.us1.make.com/6mdoh44lr7alx6c9hxulm67lkuw8raag',
-  surveyRedirect: '',
+  surveyRedirect: 'https://calendly.com/akhabitare/30min',
   privacyNotice: "/aviso-privacidad",
   termsConditions: "/aviso-privacidad",
 };
