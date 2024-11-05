@@ -35,10 +35,10 @@ export default function OptInForm({lastClick = ''}) {
     }).then((result) => result.json())
       // Send FB Event
       .then(({id}) => {
-        // fbEvent(
-        //   'Lead',
-        //   {email: data.email, phone: data.phone, externalID: id},
-        // );
+        fbEvent(
+          'CompleteRegistration',
+          {email: data.email, phone: data.phone, externalID: id},
+        );
         setCookie('lead', {...data, id});
         return id;
       })
