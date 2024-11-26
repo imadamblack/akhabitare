@@ -1,30 +1,7 @@
 import { useState } from 'react';
 
-export default function Faqs() {
+export default function Faqs({questions}) {
   const [faqOpen, setFaqOpen] = useState(0);
-
-  const questions = [
-    {
-      q: "¿Cuánto tiempo tomará completar la construcción?",
-      a: "El proceso completo dura aproximadamente un año, desde la planificación hasta la entrega, depende del tamaño del proyecto."
-    },
-    {
-      q: "¿Qué incluye el precio por metro cuadrado?",
-      a: "Incluye todos los acabados y la construcción llave en mano, pero no incluye licencias de construcción ni diseño del proyecto ejecutivo."
-    },
-    {
-      q: "¿Puedo personalizar los acabados y el diseño?",
-      a: "¡Por supuesto!, ofrecemos opciones de personalización para que tu hogar refleje tu estilo y necesidades."
-    },
-    {
-      q: "¿Qué garantías ofrecen?",
-      a: "Al ser fabricantes, te ofrecemos garantías completas sobre la calidad de los acabados y materiales utilizados."
-    },
-    {
-      q: "¿Cómo se estructuran los pagos?",
-      a: "Dividimos el presupuesto en seis pagos basados en el avance de la obra, para darte tranquilidad en tu proyecto."
-    }
-  ];
 
   return (
     <section className='bg-gray-100 py-12'>
