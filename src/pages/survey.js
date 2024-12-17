@@ -10,16 +10,16 @@ import { restrictNumber } from '../utils/formValidators';
 
 const formSteps = [
   {
-    name: 'investment',
-    title: `Ok, prometo hacer esto lo más rápido y sencillo posible, <br/>son solo 4 preguntas.`,
-    description: '¿Con qué fin estás buscando construir casa?',
+    name: 'land',
+    title: `Ok, prometo hacer esto lo más rápido y sencillo posible, <br/>son solo 5 preguntas.`,
+    description: '¿Cuentas con terreno?',
     type: 'radio',
     options: [
-      {value: 'vivienda', label: 'Para habitarla'},
-      {value: 'inversión', label: 'Para venderla'},
+      {value: 'si', label: 'Sí'},
+      {value: 'no', label: 'No'},
     ],
     cols: 2,
-    inputOptions: {required: true}
+    inputOptions: {required: true},
   },
   {
     name: 'timeframe',
@@ -33,7 +33,19 @@ const formSteps = [
       {value: '6-meses', label: 'En 6 meses'},
     ],
     cols: 1,
-    inputOptions: {required: true}
+    inputOptions: {required: true},
+  },
+  {
+    name: 'investment',
+    title: '¿Con qué fin buscas construir?',
+    description: 'Selecciona una opción por favor',
+    type: 'radio',
+    options: [
+      {value: 'vivienda', label: 'Para habitarla'},
+      {value: 'inversion', label: 'Para venderla'},
+    ],
+    cols: 1,
+    inputOptions: {required: true},
   },
   {
     name: 'budget',
@@ -46,13 +58,13 @@ const formSteps = [
       {value: '6mdp+', label: 'Más de $6,000,000'},
     ],
     cols: 1,
-    inputOptions: {required: true}
+    inputOptions: {required: true},
   },
   {
     name: 'zone',
     title: '¿En qué zona de la ciudad te gustaría construir tu casa?',
     type: 'text',
-    inputOptions: {required: true}
+    inputOptions: {required: true},
   },
 ];
 
@@ -66,7 +78,7 @@ export default function Survey() {
     handleSubmit,
     setError,
     formState: {errors},
-    watch
+    watch,
   } = methods;
 
   const router = useRouter();
@@ -94,7 +106,7 @@ export default function Survey() {
     const _fbp = getCookie('_fbp');
 
     const payload = {...data, id, fullName, email, phone, _fbc, _fbp};
-    console.log('payload',payload);
+    console.log('payload', payload);
 
     fetch(info.surveyWebhook, {
       method: 'POST',
@@ -103,10 +115,12 @@ export default function Survey() {
         'Content-Type': 'application/json',
       },
     }).then((response) => response)
-      .then(() => fbEvent(
-        'Lead',
-        {email, phone, externalID: id},
-      ))
+      .then(() => data.land === 'si'
+        ? fbEvent(
+          'Lead',
+          {email, phone, externalID: id},
+        )
+        : console.log('Lead Descalificado'))
       // Redirect to Thank you page and Scheduler
       .then(() => {
         if (info.surveyRedirect !== '') {
@@ -261,5 +275,5 @@ export async function getServerSideProps(ctx) {
     }
   }
 
-  return {props: {}}
+  return {props: {}};
 }

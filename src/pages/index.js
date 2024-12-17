@@ -28,6 +28,8 @@ import p05 from '../../public/landing/p05.png';
 import p06 from '../../public/landing/p06.png';
 import p07 from '../../public/landing/p07.png';
 import p08 from '../../public/landing/p08.png';
+import { info } from '../../info';
+import fbEvent from '../services/fbEvents';
 
 export default function Home() {
   const [lastClick, setLastClick] = useState('');
@@ -35,8 +37,10 @@ export default function Home() {
   useEffect(() => {
     scrollDepth({
       values: [25, 50, 75, 100],
-      callback: (value) => {fbq('trackCustom', `Scroll Depth: ${value}`);
-        console.log('Scroll Depth', value);},
+      callback: (value) => {
+        fbq('trackCustom', `Scroll Depth: ${value}`);
+        console.log('Scroll Depth', value);
+      },
     });
   });
 
@@ -47,30 +51,30 @@ export default function Home() {
 
   const faqs = [
     {
-      q: "¿Cuánto tiempo tomará completar la construcción?",
-      a: "El proceso completo dura aproximadamente un año, desde la planificación hasta la entrega, depende del tamaño del proyecto."
+      q: '¿Cuánto tiempo tomará completar la construcción?',
+      a: 'El proceso completo dura aproximadamente un año, desde la planificación hasta la entrega, depende del tamaño del proyecto.',
     },
     {
-      q: "¿Qué incluye el precio por metro cuadrado?",
-      a: "Incluye todos los acabados y la construcción llave en mano, pero no incluye licencias de construcción ni diseño del proyecto ejecutivo."
+      q: '¿Qué incluye el precio por metro cuadrado?',
+      a: 'Incluye todos los acabados y la construcción llave en mano, pero no incluye licencias de construcción ni diseño del proyecto ejecutivo.',
     },
     {
-      q: "¿Puedo personalizar los acabados y el diseño?",
-      a: "¡Por supuesto!, ofrecemos opciones de personalización para que tu hogar refleje tu estilo y necesidades."
+      q: '¿Puedo personalizar los acabados y el diseño?',
+      a: '¡Por supuesto!, ofrecemos opciones de personalización para que tu hogar refleje tu estilo y necesidades.',
     },
     {
-      q: "¿Qué garantías ofrecen?",
-      a: "Al ser fabricantes, te ofrecemos garantías completas sobre la calidad de los acabados y materiales utilizados."
+      q: '¿Qué garantías ofrecen?',
+      a: 'Al ser fabricantes, te ofrecemos garantías completas sobre la calidad de los acabados y materiales utilizados.',
     },
     {
-      q: "¿Cómo se estructuran los pagos?",
-      a: "Dividimos el presupuesto en seis pagos basados en el avance de la obra, para darte tranquilidad en tu proyecto."
-    }
+      q: '¿Cómo se estructuran los pagos?',
+      a: 'Dividimos el presupuesto en seis pagos basados en el avance de la obra, para darte tranquilidad en tu proyecto.',
+    },
   ];
 
   return (
     <>
-      <section className="relative min-h-[80vh] w-full flex flex-col md:justify-end items-center bg-black">
+      <section className="relative min-h-[80vh] w-full flex flex-col md:justify-end items-center bg-black pb-60">
 
         <div className="relative min-h-[24rem] flex-grow w-full md:absolute top-0 inset-x-0 bottom-1/2 md:bottom-0">
           <div
@@ -82,23 +86,23 @@ export default function Home() {
           <h1
             className="md:w-2/3 mx-auto relative font-medium ft-9 text-white [text-shadow:_2px_2px_0_rgb(0_0_0_/_20%)]">
             Construimos casas para que vivas ahí o las vendas, tú decides, te entregamos en 1 año
-            {/*No somos una constructora más de GDL, hacemos que tu terreno y ladrillos valgan 20% más en un año.*/}
           </h1>
           <p className="mt-8">Construcción | Arquitectura | Carpintería</p>
-          <div className="flex flex-col justify-start items-center mt-12">
-            <Link href="#contact">
-              <a onClick={() => setLastClick('hero')} className="button mb-4">{cta.main}</a>
-            </Link>
-            <p className="-ft-2 md:text-left">{cta.description}</p>
+          <div
+            className="absolute inset-x-0 bottom-20 mt-auto mb-0 cursor-pointer"
+          >
+            <p className="-ft-1 w-max text-center mx-auto">
+              <span className="text-gray-300">Sigue leyendo</span>
+              <span className="material-icons w-max text-gray-300 mx-auto animate-bounce">expand_more</span>
+            </p>
           </div>
         </div>
       </section>
 
       <section className="reading-container my-16">
         <p>
-          {/*Somos un equipo de obsesivos por los detalles, nos apasiona crear espacios donde la calidad y la innovación*/}
-          {/*hagan que tu inversión se multiplique.<br/><br/>*/}
-          Con más de 15 años en el negocio de la construcción y 350 proyectos completados con éxito, tenemos la experiencia
+          Con más de 15 años en el negocio de la construcción y 350 proyectos completados con éxito, tenemos la
+          experiencia
           para encargarnos de todo:<br/><br/>
           Desde el proyecto, obviamente la obra y hasta las 3P (ya sabes: pisos, puertas y pendejadas).<br/><br/>
           Así tú puedes seguir dedicándole tiempo a lo que de verdad importa: tu
@@ -354,6 +358,28 @@ export default function Home() {
             <OptInForm
               lastClick={lastClick}
             />
+            <a
+              href={`https://wa.me/${info.whatsapp.value}?text=${info.whatsapp.message}`}
+              className="button-secondary !text-brand-1 !w-full mt-8"
+              target="_blank"
+              onClick={() => fbEvent(
+                'Contact',
+                {phone: '', externalID: '', email: ''}
+              )}
+            >
+              Mándanos un WhatsApp
+            </a>
+            <a
+              href={`tel:${info.whatsapp.value}`}
+              className="button-secondary !text-brand-1 !w-full mt-4"
+              target="_blank"
+              onClick={() => fbEvent(
+                'Contact',
+                {phone: '', externalID: '', email: ''}
+              )}
+            >
+              O llámanos por teléfono
+            </a>
           </div>
         </div>
       </section>
