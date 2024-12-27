@@ -74,7 +74,7 @@ export default function Home() {
 
   return (
     <>
-      <section className="relative min-h-[80vh] w-full flex flex-col md:justify-end items-center bg-black pb-60">
+      <section className="relative min-h-[80vh] w-full flex flex-col md:justify-end items-center bg-black pb-40">
 
         <div className="relative min-h-[24rem] flex-grow w-full md:absolute top-0 inset-x-0 bottom-1/2 md:bottom-0">
           <div
@@ -88,6 +88,30 @@ export default function Home() {
             Construimos casas para que vivas ahí o las vendas, tú decides, te entregamos en 1 año
           </h1>
           <p className="mt-8">Construcción | Arquitectura | Carpintería</p>
+          <div className="flex flex-col md:flex-row gap-8 mt-8">
+            <a
+              href={`https://wa.me/${info.whatsapp.value}?text=${info.whatsapp.message}`}
+              className="button-secondary !text-brand-1 !w-full"
+              target="_blank"
+              onClick={() => fbEvent(
+                'Contact',
+                {phone: '', externalID: '', email: ''},
+              )}
+            >
+              Mándanos un WhatsApp
+            </a>
+            <a
+              href={`tel:${info.whatsapp.value}`}
+              className="button-secondary !text-brand-1 !w-full"
+              target="_blank"
+              onClick={() => fbEvent(
+                'Contact',
+                {phone: '', externalID: '', email: ''},
+              )}
+            >
+              O llámanos por teléfono
+            </a>
+          </div>
           <div
             className="absolute inset-x-0 bottom-20 mt-auto mb-0 cursor-pointer"
           >
