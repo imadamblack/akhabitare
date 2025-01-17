@@ -90,27 +90,27 @@ export default function Home() {
           <p className="mt-8">Construcción | Arquitectura | Carpintería</p>
           <div className="flex flex-col md:flex-row gap-8 mt-8">
             <a
-              href={`https://wa.me/${info.whatsapp.value}?text=${info.whatsapp.message}`}
+              href={`#contact`}
               className="button-secondary !text-brand-1 !w-full"
-              target="_blank"
-              onClick={() => fbEvent(
-                'Contact',
-                {phone: '', externalID: '', email: ''},
-              )}
+              // target="_blank"
+              // onClick={() => fbEvent(
+              //   'Contact',
+              //   {phone: '', externalID: '', email: ''},
+              // )}
             >
               Mándanos un WhatsApp
             </a>
-            <a
-              href={`tel:${info.whatsapp.value}`}
-              className="button-secondary !text-brand-1 !w-full"
-              target="_blank"
-              onClick={() => fbEvent(
-                'Contact',
-                {phone: '', externalID: '', email: ''},
-              )}
-            >
-              O llámanos por teléfono
-            </a>
+            {/*<a*/}
+            {/*  href={`tel:${info.whatsapp.value}`}*/}
+            {/*  className="button-secondary !text-brand-1 !w-full"*/}
+            {/*  target="_blank"*/}
+            {/*  onClick={() => fbEvent(*/}
+            {/*    'Contact',*/}
+            {/*    {phone: '', externalID: '', email: ''},*/}
+            {/*  )}*/}
+            {/*>*/}
+            {/*  O llámanos por teléfono*/}
+            {/*</a>*/}
           </div>
           <div
             className="absolute inset-x-0 bottom-20 mt-auto mb-0 cursor-pointer"
@@ -376,34 +376,12 @@ export default function Home() {
             <div className="mt-20 mb-12">
               <p className="ft-1 text-white">Ya llegaste hasta acá.</p>
               <p className="ft-1 text-white">
-                Compártenos unos datos y agenda una llamada con nuestro director.
+                Compártenos unos datos y platiquemos.
               </p>
             </div>
             <OptInForm
               lastClick={lastClick}
             />
-            <a
-              href={`https://wa.me/${info.whatsapp.value}?text=${info.whatsapp.message}`}
-              className="button-secondary !text-brand-1 !w-full mt-8"
-              target="_blank"
-              onClick={() => fbEvent(
-                'Contact',
-                {phone: '', externalID: '', email: ''}
-              )}
-            >
-              Mándanos un WhatsApp
-            </a>
-            <a
-              href={`tel:${info.whatsapp.value}`}
-              className="button-secondary !text-brand-1 !w-full mt-4"
-              target="_blank"
-              onClick={() => fbEvent(
-                'Contact',
-                {phone: '', externalID: '', email: ''}
-              )}
-            >
-              O llámanos por teléfono
-            </a>
           </div>
         </div>
       </section>

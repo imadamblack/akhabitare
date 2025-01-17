@@ -36,7 +36,7 @@ export default function OptInForm({lastClick = ''}) {
       // Send FB Event
       .then(({id}) => {
         fbEvent(
-          'CompleteRegistration',
+          'Lead',
           {email: data.email, phone: data.phone, externalID: id},
         );
         setCookie('lead', {...data, id});
@@ -49,7 +49,8 @@ export default function OptInForm({lastClick = ''}) {
         );
         setCookie('lead', {...data});
       })
-      .then((id) => router.push(`/survey?id=${id}`));
+      // .then((id) => router.push(`/survey?id=${id}`));
+      .then(() => router.push('/thankyou'))
   };
 
   return (
@@ -90,7 +91,7 @@ export default function OptInForm({lastClick = ''}) {
         className={`w-full ${sending ? '!bg-transparent' : 'hover:!bg-brand-1'}`}
       >{
         !sending
-          ? 'Agenda un zoom →'
+          ? 'Mándanos mensaje →'
           : <span className="material-symbols-outlined animate-spin">progress_activity</span>
       }</button>
 
