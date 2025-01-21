@@ -85,11 +85,9 @@ export default function Home() {
         <div className="container w-full text-center text-white z-10 p-8">
           <h1
             className="md:w-2/3 mx-auto relative font-medium ft-9 text-white [text-shadow:_2px_2px_0_rgb(0_0_0_/_20%)]">
-            {/*Construimos casas para que vivas ahí o las vendas, tú decides, te entregamos en 1 año*/}
-            {/*¿Otra constructora de GDL? <br/>Sí pero nosotros sí nos encargamos de absolutamente todo*/}
-            ¿Quieres construir tu casa sin batallar?
+            Construir a medida puede generarte hasta un 20% más de retorno que un depa o una casa prefabricada
           </h1>
-          <p className="ft-3 md:w-2/3 mx-auto">Somos una constructora integral para que no batalles con contratistas, carpinteros y otros que pueden retrasar tu obra.</p>
+          <p className="ft-3 md:w-2/3 mx-auto">Déjanos asesorarte para que elijas una constructora de confianza que no te vaya a quedar mal.</p>
           {/*<p className="mt-8">Construcción | Arquitectura | Carpintería</p>*/}
           <div className="flex flex-col md:flex-row gap-8 mt-8">
             <a
