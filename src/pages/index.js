@@ -372,7 +372,7 @@ export default function Home() {
         <div className="container">
           <div className="w-full md:w-1/2 mx-auto">
             <h2 className="font-semibold text-white tracking-wide">
-              Listo, es momento de que nos platiques por qué quieres construir
+              Listo, vamos programando esa asesoría gratuita que te prometimos
             </h2>
             <div className="mt-20 mb-12">
               <p className="ft-1 text-white">Ya llegaste hasta acá.</p>
