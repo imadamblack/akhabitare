@@ -1,5 +1,5 @@
 export const info = {
-  legalName: "AK Habitare S.A. de C.V.",
+  legalName: "JOSÉ ANTONIO PETROSYAN ORREGO",
   companyName: "AK Habitare",
   description: "Construcción",
   email: {
